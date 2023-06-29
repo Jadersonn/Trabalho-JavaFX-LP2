@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="telaBuscaRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TelaBuscaController">
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <TableView fx:id="tabela">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="colunaId" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="colunaNome" prefWidth="75.0" text="NOME" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <VBox prefHeight="365.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <items>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insira o nome do Departamento:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </items>
+            </ToolBar>
+            <TextField fx:id="textFieldBuscaDepartamento">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="31.0" minWidth="80.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#buscarDepartamento" prefHeight="1.0" prefWidth="1.0" text="Buscar" />
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#clickVoltar" text="Voltar">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+              </items>
+            </ToolBar>
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </VBox>
+   </left>
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Busca de Departamento" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </top>
+</BorderPane>
